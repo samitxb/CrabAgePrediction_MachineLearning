@@ -1,6 +1,23 @@
 # CrabAgePrediction Maschinelles Lernen - Datenanalyse
 PStA im Modul "Maschinelles Lernen SS2024" bei Herrn Prof. Dr. Robert Hable (Abgabe am 26. Juni 2024)
 
+## Entwicklungsumgebeung
+Bevor dieses Repo auf dem eigenen Rechner zu 100% reproduziert werden kann, sind einige initiale Schritte noetig.
+### Installation von R
+https://cran.r-project.org/bin/windows/base/ (Windows Installation)
+### Aufsetzen von VSCode
+#### Installation von VSCode
+Der Download von VSCode ist unter folgendem Link moeglich. 
+https://code.visualstudio.com/download (Windows Installation)
+#### Verwendete Extension in VSCode
+Extensions sind in VSCode auf der linken Seite mit dem Symbol von 4 Bloecken zu erreichen. Hier wurden aus dem VSCode Extension Marketplace folgende installiert:
+
+- R - REditorSupport
++ Rainbow CSV - mechatroner (nicht unbedingt noetig, macht aber den Datensatz uebersichtlicher)
+
+### Installation benoetigter Pakete
+- ggplot2 - hierbei "install.packages("ggplot2")" imTerminal von R ausfuehren.
+
 ## Verwendeter Datensatz
 https://www.kaggle.com/datasets/sidhus/crab-age-prediction
 
