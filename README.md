@@ -16,7 +16,7 @@ Extensions sind in VSCode auf der linken Seite mit dem Symbol von 4 Bloecken zu 
 + Rainbow CSV - mechatroner (nicht unbedingt noetig, macht aber den Datensatz uebersichtlicher)
 
 ### Installation benoetigter Pakete
-- ggplot2 - hierbei "install.packages("ggplot2")" imTerminal von R ausfuehren.
+- ggplot2 - hierbei "install.packages("ggplot2")" im Terminal von R ausfuehren und wähle einen CRAN Mirror aus (bspw. Germany - Erlangen).
 - GGally - ... install.packages("GGally") ...
 
 ## Verwendeter Datensatz
