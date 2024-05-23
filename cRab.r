@@ -11,7 +11,8 @@ library(ggplot2)
 library(GGally)
 
 # Daten einlesen
-setwd("C:/Users/administrator.ICD/Desktop/R ML")
+#setwd("C:/Users/administrator.ICD/Desktop/R ML")
+setwd("C:/Users/Sami/Desktop/CrabAgePrediction_ML_DataAnalysis")
 
 Daten <- read.csv("CrabAgePrediction.csv",header=TRUE,sep=",", fill=TRUE, stringsAsFactors=TRUE)
 
