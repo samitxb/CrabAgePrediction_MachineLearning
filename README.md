@@ -51,4 +51,10 @@ https://www.kaggle.com/datasets/sidhus/crab-age-prediction
 ## Histogramm Alter
 ![histogramm](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/histogram_alter.png)
 
+## Boxplot Alter Geschlecht
+![boxplot](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/boxplot_alter_geschlecht.png)
+
+## Violin Alter Geschlecht
+![violin](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/violin_alter_geschlecht.png)
+
 ## Ergebnisse und Analyse der verwendeten Lernverfahren
