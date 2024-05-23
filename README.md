@@ -28,6 +28,7 @@ https://www.kaggle.com/datasets/sidhus/crab-age-prediction
 # Datensatz und Zweck der Analyse
 
 # Ergebnisse der deskriptiven Analyse
-## Scatter: Laenge und Alter nach Geschlecht
+## Laenge und Alter nach Geschlecht
+![scatter](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/groesse_alter_nach_geschlecht.png)
 
 ## Ergebnisse und Analyse der verwendeten Lernverfahren
