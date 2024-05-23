@@ -8,6 +8,7 @@
 #
 ################################################################################
 library(ggplot2)
+library(GGally)
 
 # Daten einlesen
 setwd("C:/Users/administrator.ICD/Desktop/R ML")
@@ -46,5 +47,37 @@ labs(
   y = "Haeufigkeit"
 ) +
 theme_minimal()
-
 ggsave(filename = "histogram_alter.png", plot = hist_plot, bg = "white")
+
+#PLOT: Violin Alter Geschlecht
+violin_plot <- ggplot(Daten, aes(x = Age, y = Sex, fill = Sex)) +
+geom_violin() +
+labs(
+  title = "Violin Plot Alter und Geschlecht",
+  x = "Alter",
+  y = "Geschlecht"
+) +
+theme_minimal()
+ggsave(filename = "violin_alter_geschlecht.png", plot = violin_plot, bg = "white")
+
+#PLOT: Box Alter Geschlecht
+box_plot <- ggplot(Daten, aes(x = Age, y = Sex, fill = Sex)) +
+geom_boxplot()
+labs(
+  title = "Boxplot Alter Geschlecht",
+  x = "Alter",
+  y = "Geschlecht"
+) +
+theme_minimal()
+ggsave(filename = "boxplot_alter_geschlecht.png", plot = box_plot, bg = "white")
+
+pairs_plot <- ggpairs(
+  Daten, 
+  axisLabels = "none",
+  lower = list(continuous = wrap("points", alpha = 0.3, size = 0.5), mapping = aes(color = Sex)),
+  diag = list(continuous = wrap("barDiag", alpha = 0.3, bins = 30)),
+  upper = list(continuous = wrap("blank"))
+  )
+ggsave(filename = "pairs_plot.png", plot = pairs_plot, bg = "white")
+
+
