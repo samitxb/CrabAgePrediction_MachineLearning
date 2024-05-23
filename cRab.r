@@ -39,7 +39,7 @@ ggsave(filename = "groesse_alter_nach_geschlecht.png", plot = gang_plot, bg = "w
 
 #PLOT: Histogram Alter
 hist_plot <- ggplot(Daten, aes(x = Age)) +
-geom_histogram(binwidth = 5, fill = "blue", color = "black", alpha = 0.7) + #alpha macht balken etwas trasparent
+geom_histogram(binwidth = 0.5, fill = "blue", color = "black", alpha = 0.7) + #alpha macht balken etwas trasparent
 labs(
   title = "Histogram Alter",
   x = "Alter",
