@@ -88,7 +88,7 @@ heatmap_daten <- cbind(koordinaten_heatmap, value = as.vector(korrelationsmatrix
 #PLOT: Korrelationsmatrix
 korr_mat_plot <- ggplot(data = heatmap_daten, aes(x = col, y = row, fill = value)) +
   geom_tile() +
-  scale_fill_gradient2(low = "blue", mid = "orange", high = "red", midpoint = 0) +
+  scale_fill_gradient2(low = "blue", mid = "white", high = "red", midpoint = 0) +
   geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
   theme_minimal() +
   labs(
