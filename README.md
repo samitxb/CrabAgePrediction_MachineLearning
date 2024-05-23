@@ -61,4 +61,7 @@ https://www.kaggle.com/datasets/sidhus/crab-age-prediction
 ## Pairs Plot
 ![pairsplot](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/pairs_plot.png)
 
+## Korrelationsmatrix (Heatmap)
+![heatmap](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/korrelationsmatrix_heatmap.png)
+
 ## Ergebnisse und Analyse der verwendeten Lernverfahren
