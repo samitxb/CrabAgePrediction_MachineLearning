@@ -79,10 +79,13 @@ Das Histogramm ist ziemlich gut Normalenverteilt und auf der Grafik scheint das 
 Die bivariate Analyse untersucht die Beziehung zwischen zwei Variablen. Dies hilft, Zusammenhänge und Abhängigkeiten zu identifizieren. Hier werden Zusammenhänge dargestellt, welche aus dem Bauch heraus zusammenhängend erscheinen. Alleine die graphische Darstellung dieser, lässt die Annahme weder bestätigen, noch wiederlegen. Dennoch geben diese einen guten Einblick und ist der initiale Schritt um tendenzen im Datenset zu erkennen.
 ### Laenge und Alter nach Geschlecht
 ![scatter](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/groesse_alter_nach_geschlecht.png)
+Mit Hilfe eines Streudiagramms, wurde die Beziehung zwischen der Länge und dem Alter untersucht. Obwohl es Korrelation zu geben scheint, kann die Kausalität nicht allein aus dem Streudiagramm abgeleitet werden.
 ### Boxplot Alter Geschlecht
 ![boxplot](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/boxplot_alter_geschlecht.png)
+Der Boxplot dient dazu, die Altersverteilung zwischen männlichen und weiblichen Krabben sowie Indeterminate Krabben zu vergleichen. Die Boxplots zeigen, dass der Median, die Quartile und die Ausreißer für männliche und weibliche Krabben im Vergleich zu den mittleren Krabben fast identisch sind.
 ### Violin Alter Geschlecht
 ![violin](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/violin_alter_geschlecht.png)
+Mithilfe eines Violin-Diagramms wird die Altersverteilung in Abhängigkeit vom Geschlecht untersucht. Das Diagramm zeigt eine Ausbuchtung in der Mitte, was darauf hindeutet, dass der Medianwert häufiger vorkommt als andere Werte. Dies wiederum deutet darauf hin, dass die Verteilung möglicherweise auf den Median ausgerichtet ist oder mehr Beobachtungen um ihn herum vorliegen.
 
 ## Multivariate Analysen
 ### Pairs Plot
