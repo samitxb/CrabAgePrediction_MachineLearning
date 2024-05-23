@@ -7,7 +7,7 @@ https://www.kaggle.com/datasets/sidhus/crab-age-prediction
 ## Summary
 
 |   Sex   |     Length      |    Diameter     |     Height      |     Weight      |
-|.........|.................|.................|.................|.................|
+|---------|-----------------|-----------------|-----------------|-----------------|
 | F:1225  | Min.   :0.1875  | Min.   :0.1375  | Min.   :0.0000  | Min.   : 0.0567 |
 | I:1233  | 1st Qu.:1.1250  | 1st Qu.:0.8750  | 1st Qu.:0.2875  | 1st Qu.:12.6722 |
 | M:1435  | Median :1.3625  | Median :1.0625  | Median :0.3625  | Median :22.7930 |
@@ -17,7 +17,7 @@ https://www.kaggle.com/datasets/sidhus/crab-age-prediction
 
 
 |  Shucked.Weight   |  Viscera.Weight   |   Shell.Weight    |       Age      |
-|...................|...................|...................|................|
+|-------------------|-------------------|-------------------|----------------|
 | Min.   : 0.02835  | Min.   : 0.01418  | Min.   : 0.04252  | Min.   : 1.000 |
 | 1st Qu.: 5.34388  | 1st Qu.: 2.66485  | 1st Qu.: 3.71378  | 1st Qu.: 8.000 |
 | Median : 9.53961  | Median : 4.86194  | Median : 6.66213  | Median :10.000 |
