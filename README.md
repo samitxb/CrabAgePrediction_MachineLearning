@@ -1,34 +1,35 @@
 # CrabAgePrediction Maschinelles Lernen - Datenanalyse
 PStA im Modul "Maschinelles Lernen SS2024" bei Herrn Prof. Dr. Robert Hable (Abgabe am 26. Juni 2024)
 
-## Entwicklungsumgebeung
+# Entwicklungsumgebeung
 Bevor dieses Repo auf dem eigenen Rechner zu 100% reproduziert werden kann, sind einige initiale Schritte noetig.
-### Installation von R
+## Installation von R
 https://cran.r-project.org/bin/windows/base/ (Windows Installation)
-### Aufsetzen von VSCode
-#### Installation von VSCode
+## Aufsetzen von VSCode
+### Installation von VSCode
 Der Download von VSCode ist unter folgendem Link moeglich. 
 https://code.visualstudio.com/download (Windows Installation)
-#### Verwendete Extension in VSCode
+### Verwendete Extension in VSCode
 Extensions sind in VSCode auf der linken Seite mit dem Symbol von 4 Bloecken zu erreichen. Hier wurden aus dem VSCode Extension Marketplace folgende installiert:
 
 - R - REditorSupport
 + Rainbow CSV - mechatroner (nicht unbedingt noetig, macht aber den Datensatz uebersichtlicher)
 
-#### Git Bash
+### Git Bash
 Git Bash im Zielordner ausführen und folgenden Befehl ausführen:
 git clone https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis.git
 
-#### Anpassungen in VSCode
+### Anpassungen in VSCode
 Im Explorer von VSCode den Projektordner öffnen. Danach den Pfad der csv-Datei anpassen.
 
-### Installation benoetigter Pakete
+## Installation benoetigter Pakete
 - ggplot2 - hierbei "install.packages("ggplot2")" im Terminal von R ausfuehren und wähle einen CRAN Mirror aus (bspw. Germany - Erlangen).
 - GGally - ... install.packages("GGally") ...
 
-## Verwendeter Datensatz
+# Datensatz und Zweck der Analyse
+Der Datensatz wird verwendet, um das Alter der Krabbe auf der Grundlage der physischen Attribute zu schätzen. Es ist ein hervorragender Ausgangspunkt für die klassische Regressionsanalyse und das Feature-Engineering sowie für das Verständnis der Auswirkungen des Feature-Engineering im Bereich Data Science. (Deutsche Übersetzung von Kaggle Beschreibung des Datensatzes)
+## Wo finde ich den Datensatz?
 https://www.kaggle.com/datasets/sidhus/crab-age-prediction
-
 ## Summary
 
 |   Sex   |     Length      |    Diameter     |     Height      |     Weight      |
@@ -50,25 +51,23 @@ https://www.kaggle.com/datasets/sidhus/crab-age-prediction
 | 3rd Qu.:14.27397  | 3rd Qu.: 7.20077  | 3rd Qu.: 9.35534  | 3rd Qu.:11.000 |
 | Max.   :42.18406  | Max.   :21.54562  | Max.   :28.49125  | Max.   :29.000 |
 
-# Datensatz und Zweck der Analyse
-
-# Ergebnisse der deskriptiven Analyse
-## Laenge und Alter nach Geschlecht
-![scatter](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/groesse_alter_nach_geschlecht.png)
-
-## Histogramm Alter
+# Deskriptive Analyse
+## Univariate Analyse
+### Histogramm Alter
 ![histogramm](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/histogram_alter.png)
 
-## Boxplot Alter Geschlecht
+## Bivariate Analysen
+### Laenge und Alter nach Geschlecht
+![scatter](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/groesse_alter_nach_geschlecht.png)
+### Boxplot Alter Geschlecht
 ![boxplot](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/boxplot_alter_geschlecht.png)
-
-## Violin Alter Geschlecht
+### Violin Alter Geschlecht
 ![violin](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/violin_alter_geschlecht.png)
 
-## Pairs Plot
+## Multivariate Analysen
+### Pairs Plot
 ![pairsplot](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/pairs_plot.png)
-
-## Korrelationsmatrix (Heatmap)
+### Korrelationsmatrix (Heatmap)
 ![heatmap](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/korrelationsmatrix_heatmap.png)
 
-## Ergebnisse und Analyse der verwendeten Lernverfahren
+# Ergebnisse und Analyse der verwendeten Lernverfahren
