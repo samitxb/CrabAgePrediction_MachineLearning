@@ -17,6 +17,7 @@ Extensions sind in VSCode auf der linken Seite mit dem Symbol von 4 Bloecken zu 
 
 ### Installation benoetigter Pakete
 - ggplot2 - hierbei "install.packages("ggplot2")" imTerminal von R ausfuehren.
+- GGally - ... install.packages("GGally") ...
 
 ## Verwendeter Datensatz
 https://www.kaggle.com/datasets/sidhus/crab-age-prediction
