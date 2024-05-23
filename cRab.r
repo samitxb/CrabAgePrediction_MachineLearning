@@ -7,7 +7,7 @@
 #   Vorgelegt von:  Sami Taieb (00803933) AI-M
 #
 ################################################################################
-
+library(ggplot2)
 
 # Daten einlesen
 setwd("C:/Users/administrator.ICD/Desktop/R ML")
@@ -23,7 +23,28 @@ Daten_M <- Daten[which(Daten$Sex == "M"), ]
 Daten_F <- Daten[which(Daten$Sex == "F"), ]
 Daten_I <- Daten[which(Daten$Sex == "I"), ]
 
-##!! Abstand zueinander zu gering
-plot(Daten_M[, "Length"], Daten_M[, "Age"], main="Gegenueberstellung von Laenge und Alter", xlab="Laenge", ylab="Alter", col="red", cex=1)
-points(Daten_F[, "Length"], Daten_F[, "Age"], col="blue", cex=1)
-points(Daten_I[, "Length"], Daten_I[, "Age"], col="green", cex=1)
+# PLOT: Laenge und Alter nach Geschlecht
+gang_plot <- ggplot(Daten, aes(x = Length, y = Age, color = Sex)) +
+geom_point(size = 3) +
+labs(
+  title = "Laenge und Alter nach Geschlecht",
+  x = "Laenge",
+  y = "Alter",
+  color = "Geschlecht"
+) +
+theme_minimal()
+
+ggsave(filename = "groesse_alter_nach_geschlecht.png", plot = gang_plot, bg = "white")
+
+
+#PLOT: Histogram Alter
+hist_plot <- ggplot(Daten, aes(x = Age)) +
+geom_histogram(binwidth = 5, fill = "blue", color = "black", alpha = 0.7) + #alpha macht balken etwas trasparent
+labs(
+  title = "Histogram Alter",
+  x = "Alter",
+  y = "Haeufigkeit"
+) +
+theme_minimal()
+
+ggsave(filename = "histogram_alter.png", plot = hist_plot, bg = "white")
