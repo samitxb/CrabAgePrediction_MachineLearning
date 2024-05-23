@@ -58,4 +58,7 @@ https://www.kaggle.com/datasets/sidhus/crab-age-prediction
 ## Violin Alter Geschlecht
 ![violin](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/violin_alter_geschlecht.png)
 
+## Pairs Plot
+![pairsplot](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/pairs_plot.png)
+
 ## Ergebnisse und Analyse der verwendeten Lernverfahren
