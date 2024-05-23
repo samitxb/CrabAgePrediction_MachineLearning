@@ -35,7 +35,7 @@ labs(
 ) +
 theme_minimal()
 
-ggsave(filename = "groesse_alter_nach_geschlecht.png", plot = gang_plot, bg = "white")
+ggsave(filename = "groesse_alter_nach_geschlecht.png", plot = gang_plot, bg = "white", width = 10, height = 7)
 
 
 #PLOT: Histogram Alter
@@ -47,7 +47,7 @@ labs(
   y = "Haeufigkeit"
 ) +
 theme_minimal()
-ggsave(filename = "histogram_alter.png", plot = hist_plot, bg = "white")
+ggsave(filename = "histogram_alter.png", plot = hist_plot, bg = "white", width = 10, height = 7)
 
 #PLOT: Violin Alter Geschlecht
 violin_plot <- ggplot(Daten, aes(x = Age, y = Sex, fill = Sex)) +
@@ -58,7 +58,7 @@ labs(
   y = "Geschlecht"
 ) +
 theme_minimal()
-ggsave(filename = "violin_alter_geschlecht.png", plot = violin_plot, bg = "white")
+ggsave(filename = "violin_alter_geschlecht.png", plot = violin_plot, bg = "white", width = 10, height = 7)
 
 #PLOT: Box Alter Geschlecht
 box_plot <- ggplot(Daten, aes(x = Age, y = Sex, fill = Sex)) +
@@ -69,8 +69,9 @@ labs(
   y = "Geschlecht"
 ) +
 theme_minimal()
-ggsave(filename = "boxplot_alter_geschlecht.png", plot = box_plot, bg = "white")
+ggsave(filename = "boxplot_alter_geschlecht.png", plot = box_plot, bg = "white", width = 10, height = 7)
 
+#PLOT: Pairs Plot
 pairs_plot <- ggpairs(
   Daten, 
   axisLabels = "none",
@@ -78,6 +79,22 @@ pairs_plot <- ggpairs(
   diag = list(continuous = wrap("barDiag", alpha = 0.3, bins = 30)),
   upper = list(continuous = wrap("blank"))
   )
-ggsave(filename = "pairs_plot.png", plot = pairs_plot, bg = "white")
+ggsave(filename = "pairs_plot.png", plot = pairs_plot, bg = "white", width = 10, height = 7)
 
+#Korrelationsmatrix
+korrelationsmatrix <- cor(Daten[, 2 : 9])
+koordinaten_heatmap <- expand.grid(row = colnames(korrelationsmatrix), col = colnames(korrelationsmatrix))
+heatmap_daten <- cbind(koordinaten_heatmap, value = as.vector(korrelationsmatrix))
+#PLOT: Korrelationsmatrix
+korr_mat_plot <- ggplot(data = heatmap_daten, aes(x = col, y = row, fill = value)) +
+  geom_tile() +
+  scale_fill_gradient2(low = "blue", mid = "orange", high = "red", midpoint = 0) +
+  geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+  theme_minimal() +
+  labs(
+    title = "Heatmap der Korrelationsmatrix",
+    x = "",
+    y = ""
+  )
+  ggsave(filename = "korrelationsmatrix_heatmap.png", plot = korr_mat_plot, bg = "white", width = 10, height = 7)
 
