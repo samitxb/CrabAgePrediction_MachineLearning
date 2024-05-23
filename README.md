@@ -27,7 +27,16 @@ Im Explorer von VSCode den Projektordner öffnen. Danach den Pfad der csv-Datei 
 - GGally - ... install.packages("GGally") ...
 
 # Datensatz und Zweck der Analyse
-Der Datensatz wird verwendet, um das Alter der Krabbe auf der Grundlage der physischen Attribute zu schätzen. Es ist ein hervorragender Ausgangspunkt für die klassische Regressionsanalyse und das Feature-Engineering sowie für das Verständnis der Auswirkungen des Feature-Engineering im Bereich Data Science. (Deutsche Übersetzung von Kaggle Beschreibung des Datensatzes)
+Der Datensatz wird verwendet, um das Alter der Krabbe auf der Grundlage der physischen Attribute zu schätzen. Es ist ein hervorragender Ausgangspunkt für die klassische Regressionsanalyse und das Feature-Engineering sowie für das Verständnis der Auswirkungen des Feature-Engineering im Bereich Data Science. (Deutsche Übersetzung von Kaggle)
+## Was beinhaltet der Datensatz an Features?
+|   Sex   |     Length      |    Diameter     |     Height      |     Weight      |
+|---------|-----------------|-----------------|-----------------|-----------------|
+| Gender of the Crab - Male, Female and Indeterminate. | Length of the Crab (in Feet; 1 foot = 30.48 cms)  | Diameter of the Crab (in Feet; 1 foot = 30.48 cms)  | Height of the Crab (in Feet; 1 foot = 30.48 cms)  | Weight of the Crab (in ounces; 1 Pound = 16 ounces) |
+
+|  Shucked.Weight   |  Viscera.Weight   |   Shell.Weight    |       Age      |
+|-------------------|-------------------|-------------------|----------------|
+| Weight without the shell (in ounces; 1 Pound = 16 ounces)  | is weight that wraps around your abdominal organs deep inside body (in ounces; 1 Pound = 16 ounces)  | Weight of the Shell (in ounces; 1 Pound = 16 ounces)  | Age of the Crab (in months) |
+
 ## Wo finde ich den Datensatz?
 https://www.kaggle.com/datasets/sidhus/crab-age-prediction
 ## Summary
@@ -52,11 +61,22 @@ https://www.kaggle.com/datasets/sidhus/crab-age-prediction
 | Max.   :42.18406  | Max.   :21.54562  | Max.   :28.49125  | Max.   :29.000 |
 
 # Deskriptive Analyse
+Um sich zunächst einen Überblick des Datensatzes zu verschaffen, wird im folgenden eine deskriptive Analyse durchgeführt. Dies beinhaltet folgende Grafiken, die hier noch genauer behandelt werden:
++ Histogramm (Alter)
++ Scatter-Plot (Länge, Alter)
++ Box-Plot (Alter, Geschlecht)
++ Violin-Plot (Alter, Geschlecht)
++ Pairs-Plot
++ Heatmap der Korrelationsmatrix
+
 ## Univariate Analyse
+Die univariate Analyse untersucht einzelne Variablen unabhängig voneinander. Ziel ist es, grundlegende Eigenschaften der Daten zu verstehen. Expliziet hier wird sich die Variable Alter im Histogramm näher angesehen, um sich einen Überblick der Verteilung zu verschaffen. 
 ### Histogramm Alter
 ![histogramm](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/histogram_alter.png)
+Das Histogramm ist ziemlich gut Normalenverteilt und auf der Grafik scheint das Durchschnittsalter in etwa 10 Monate zu sein. Dies kommt auch sehr genau an den Wert aus der Summary heran (9.955). Dieses Histogramm stellt die Werte aus der Summary anschaulich graphisch dar.
 
 ## Bivariate Analysen
+Die bivariate Analyse untersucht die Beziehung zwischen zwei Variablen. Dies hilft, Zusammenhänge und Abhängigkeiten zu identifizieren. Hier werden Zusammenhänge dargestellt, welche aus dem Bauch heraus zusammenhängend erscheinen. Alleine die graphische Darstellung dieser, lässt die Annahme weder bestätigen, noch wiederlegen. Dennoch geben diese einen guten Einblick und ist der initiale Schritt um tendenzen im Datenset zu erkennen.
 ### Laenge und Alter nach Geschlecht
 ![scatter](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/groesse_alter_nach_geschlecht.png)
 ### Boxplot Alter Geschlecht
