@@ -15,6 +15,13 @@ Extensions sind in VSCode auf der linken Seite mit dem Symbol von 4 Bloecken zu 
 - R - REditorSupport
 + Rainbow CSV - mechatroner (nicht unbedingt noetig, macht aber den Datensatz uebersichtlicher)
 
+#### Git Bash
+Git Bash im Zielordner ausführen und folgenden Befehl ausführen:
+git clone https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis.git
+
+#### Anpassungen in VSCode
+Im Explorer von VSCode den Projektordner öffnen. Danach den Pfad der csv-Datei anpassen.
+
 ### Installation benoetigter Pakete
 - ggplot2 - hierbei "install.packages("ggplot2")" im Terminal von R ausfuehren und wähle einen CRAN Mirror aus (bspw. Germany - Erlangen).
 - GGally - ... install.packages("GGally") ...
