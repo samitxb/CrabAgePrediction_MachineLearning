@@ -31,4 +31,7 @@ https://www.kaggle.com/datasets/sidhus/crab-age-prediction
 ## Laenge und Alter nach Geschlecht
 ![scatter](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/groesse_alter_nach_geschlecht.png)
 
+## Histogramm Alter
+![histogramm](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/histogram_alter.png)
+
 ## Ergebnisse und Analyse der verwendeten Lernverfahren
