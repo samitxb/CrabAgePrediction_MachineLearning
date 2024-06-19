@@ -192,3 +192,32 @@ svr_plot <- ggplot(testdaten, aes(x = ShellWeight, y = Age)) +
   ) +
   theme_minimal()
 ggsave(filename = "svr_plot.png", plot = svr_plot, bg = "white", width = 10, height = 7)
+
+# Support Vector Regression (SVR) mit Hyperparameter-Tuning
+cc <- seq(-5, 10, 1)    # für mögliche Werte von "Cost" (Tuningparameter)
+cg <- seq(-4, 1, 0.5)   # für mögliche Werte von "gamma" (Tuningparameter)
+
+tuning <- tune.svm(Age ~ ShellWeight, data = trainingdaten, scale = TRUE, type = "eps-regression", kernel = "radial",
+                   gamma = 10^cg, cost = 2^cc, epsilon = 0.1, tunecontrol = tune.control(sampling = "cross", cross = 5))
+
+print(tuning)
+best_svr_model <- tuning$best.model  # Das Modell mit den optimalen Tuningparametern
+
+# Vorhersagen mit dem besten Modell
+svr_predictions <- predict(best_svr_model, testdaten)
+svr_mse <- mean((svr_predictions - testdaten$Age)^2)
+svr_mae <- mean(abs(svr_predictions - testdaten$Age))
+print(paste("MSE of Tuned SVM:", svr_mse))
+print(paste("MAE of Tuned SVM:", svr_mae))
+
+# Plot für SVM mit den besten Parametern
+svr_plot <- ggplot(testdaten, aes(x = ShellWeight, y = Age)) +
+  geom_point(color = "blue", alpha = 0.5) +
+  geom_line(aes(y = svr_predictions), color = "red") +
+  labs(
+    title = "Tuned Support Vector Regression: Vorhersagen vs. Tatsächliche Werte",
+    x = "ShellWeight",
+    y = "Age"
+  ) +
+  theme_minimal()
+ggsave(filename = "tuned_svr_plot.png", plot = svr_plot, bg = "white", width = 10, height = 7)
