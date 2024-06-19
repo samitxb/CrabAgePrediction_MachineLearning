@@ -103,8 +103,7 @@ Mithilfe eines Violin-Diagramms wird die Altersverteilung in Abhängigkeit vom G
 
 ## Linear Regression Summary
 
-**Call:**
-```r
+Call:
 lm(formula = Age ~ ShellWeight, data = trainingdaten)
 
 Residuals:
