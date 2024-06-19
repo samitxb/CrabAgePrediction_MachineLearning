@@ -31,7 +31,9 @@ Im Explorer von VSCode den Projektordner öffnen. Danach den Pfad der csv-Datei 
 - caret
 
 # Datensatz und Zweck der Analyse
-Der Datensatz wird verwendet, um das Alter der Krabbe auf der Grundlage der physischen Attribute zu schätzen. Es ist ein hervorragender Ausgangspunkt für die klassische Regressionsanalyse und das Feature-Engineering sowie für das Verständnis der Auswirkungen des Feature-Engineering im Bereich Data Science. (Deutsche Übersetzung von Kaggle)
+Der Datensatz wird verwendet, um das Alter einer Krabbe auf der Grundlage der physischen Attribute zu schätzen. Es ist ein hervorragender Ausgangspunkt für die klassische Regressionsanalyse und das Feature-Engineering sowie für das Verständnis der Auswirkungen des Feature-Engineering im Bereich Data Science. (Deutsche Übersetzung von Kaggle)
+## Datensatz anpassen
+Es müssen noch die Namen der Attribute angepasst werden. Dazu einfach den Leerschritt bei den Namen entfernen.
 ## Was beinhaltet der Datensatz an Features?
 |   Sex   |     Length      |    Diameter     |     Height      |     Weight      |
 |---------|-----------------|-----------------|-----------------|-----------------|
@@ -101,7 +103,7 @@ Mithilfe eines Violin-Diagramms wird die Altersverteilung in Abhängigkeit vom G
 ## Lineare Regression
 ![linearRegressionPlot](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/linear_regression_plot.png)
 
-## Linear Regression Summary
+### Linear Regression Summary
 ```r
 Call:
 lm(formula = Age ~ ShellWeight, data = trainingdaten)
@@ -125,8 +127,37 @@ F-statistic:  1700 on 1 and 2723 DF,  p-value: < 2.2e-16
 
 ## Entscheidungsbaum
 ![treePlot](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/decision_tree_plot.png)
+
+### Entscheidungsbaum Summary
+```r
+Regression tree:
+tree(formula = Age ~ ShellWeight, data = trainingdaten)
+Number of terminal nodes:  6
+Residual mean deviance:  6.349 = 17260 / 2719
+Distribution of residuals:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+-5.9340 -1.9270 -0.9268  0.0000  1.0470 17.0700
+```
+
 ## Support Vector Regression
 ![SVRPlot](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/svr_plot.png)
+
+### SVR Summary
+```r
+Call:
+svm(formula = Age ~ ShellWeight, data = trainingdaten)
+
+
+Parameters:
+   SVM-Type:  eps-regression
+ SVM-Kernel:  radial
+       cost:  1
+      gamma:  1
+    epsilon:  0.1
+
+
+Number of Support Vectors:  2313
+```
 
 ## MAE und MSE
 |  Model   |  MSE   |   MAE    |
