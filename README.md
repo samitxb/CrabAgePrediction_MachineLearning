@@ -100,23 +100,30 @@ Mithilfe eines Violin-Diagramms wird die Altersverteilung in Abhängigkeit vom G
 # Ergebnisse und Analyse der verwendeten Lernverfahren
 ## Lineare Regression
 ![linearRegressionPlot](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/linear_regression_plot.png)
-Call:
+
+## Linear Regression Summary
+
+**Call:**
+```r
 lm(formula = Age ~ ShellWeight, data = trainingdaten)
 
 Residuals:
-|    Min   |   1Q  | Median     | 3Q  |   Max
-|-6.0037 | -1.6368 | -0.6061 |  0.9455 | 15.6072
+|   Min   |  1Q   | Median | 3Q   |  Max   |
+|---------|-------|--------|------|--------|
+|-6.0037  | -1.6368 | -0.6061 | 0.9455 | 15.6072 |
 
 Coefficients:
- |        |   Estimate | Std. Error | t value | Pr(>|t|)    
-|(Intercept) | 6.50290 |   0.09718  | 66.92  | <2e-16 ***
-|ShellWeight | 0.51165  |  0.01241 |  41.23 |  <2e-16 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+| | Estimate | Std. Error | t value | Pr(>|t|) |
+|-------------|----------|------------|---------|-----------|
+|(Intercept) | 6.50290 | 0.09718 | 66.92 | < 2e-16 *** |
+|ShellWeight | 0.51165 | 0.01241 | 41.23 | < 2e-16 *** |
+
+Signif. codes: 0 '' 0.001 '' 0.01 '' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 2.548 on 2723 degrees of freedom
-Multiple R-squared:  0.3844,    Adjusted R-squared:  0.3841
-F-statistic:  1700 on 1 and 2723 DF,  p-value: < 2.2e-16
+Multiple R-squared: 0.3844
+Adjusted R-squared: 0.3841
+F-statistic: 1700 on 1 and 2723 DF, p-value: < 2.2e-16
 
 ## Entscheidungsbaum
 ![treePlot](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/decision_tree_plot.png)
