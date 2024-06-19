@@ -127,37 +127,37 @@ F-statistic:  1700 on 1 and 2723 DF,  p-value: < 2.2e-16
 #### Auswertung der Summary
 Das Modell versucht, das Alter (Age) anhand des Schalengewichts (ShellWeight) vorherzusagen.
 
-**Residuals:**
+**Residuals:** <br />
 Die Residuals geben die Differenz zwischen den vorhergesagten und den tatsächlichen Werten an:
 - **Min:** -6.0037
 - **1Q (1. Quartil):** -1.6368
 - **Median:** -0.6061
 - **3Q (3. Quartil):** 0.9455
-- **Max:** 15.6072
+- **Max:** 15.6072 <br />
 Die Residuals zeigen, dass es einige Ausreißer gibt (z.B. Max = 15.6072), aber der Median der Residuen liegt fast bei Null (-0.6061), was darauf hinweist, dass das Modell grundsätzlich gut an die Daten angepasst ist.
 
-**Coefficients:**
-- **Intercept (Achsenabschnitt):** 6.50290
+**Coefficients:** <br />
+- **Intercept (Achsenabschnitt):** 6.50290 <br />
 Das bedeutet, dass wenn das Schalengewicht 0 ist, das vorhergesagte Alter etwa 6.50 Jahre beträgt.
-- **ShellWeight (Steigung):** 0.51165
+- **ShellWeight (Steigung):** 0.51165 <br />
 Dies bedeutet, dass für jede Einheit Zunahme des Schalengewichts das Alter um etwa 0.51 Jahre zunimmt.
-- **t-Werte und p-Werte** 
+- **t-Werte und p-Werte** <br />
 Diese zeigen die Signifikanz der Koeffizienten an. Beide p-Werte sind extrem klein (< 2e-16), was darauf hinweist, dass beide Koeffizienten statistisch signifikant sind.
 
-**Residual standard error:**
+**Residual standard error:** <br />
 Der Residualstandardfehler beträgt 2.548, was die durchschnittliche Abweichung der Residuen von der Regressionslinie darstellt. Ein kleinerer Wert wäre wünschenswert, zeigt aber, dass es immer noch Variabilität gibt, die nicht durch das Modell erklärt wird.
 
 **Multiple R-squared und Adjusted R-squared:**
-- **Multiple R-squared:** 0.3844
+- **Multiple R-squared:** 0.3844 <br />
 Dies bedeutet, dass etwa 38.44% der Varianz des Alters durch das Schalengewicht erklärt wird.
-- **Adjusted R-squared:** 0.3841
+- **Adjusted R-squared:** 0.3841 <br />
 Dies ist eine angepasste Version des R-squared, die die Anzahl der Prädiktoren im Modell berücksichtigt. Es ist ähnlich wie das Multiple R-squared, was darauf hinweist, dass das Modell keine unnötigen Prädiktoren enthält.
 
 **F-statistic:**
-- **F-statistic:** 1700 auf 1 und 2723 DF, p-value: < 2.2e-16
+- **F-statistic:** 1700 auf 1 und 2723 DF, p-value: < 2.2e-16 <br />
 Die F-Statistik testet die Gesamtsignifikanz des Modells. Ein sehr kleiner p-Wert (< 2.2e-16) zeigt, dass das Modell statistisch signifikant ist und das Schalengewicht einen signifikanten Einfluss auf das Alter hat.
 
-**Zusammenfassung:**
+**Zusammenfassung:** <br />
 Das Modell zeigt eine signifikante Beziehung zwischen Schalengewicht und Alter. Beide Koeffizienten sind hochsignifikant, und das Modell erklärt etwa 38.44% der Varianz des Alters. Es gibt jedoch immer noch eine beträchtliche Menge an nicht erklärter Variabilität, was durch den Residualstandardfehler und die Residuen angezeigt wird. 
 
 
