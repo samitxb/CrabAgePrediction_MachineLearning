@@ -25,6 +25,10 @@ Im Explorer von VSCode den Projektordner öffnen. Danach den Pfad der csv-Datei 
 ## Installation benoetigter Pakete
 - ggplot2 - hierbei "install.packages("ggplot2")" im Terminal von R ausfuehren und wähle einen CRAN Mirror aus (bspw. Germany - Erlangen).
 - GGally - ... install.packages("GGally") ...
+- tidyverse
+- e1071
+- tree
+- caret
 
 # Datensatz und Zweck der Analyse
 Der Datensatz wird verwendet, um das Alter der Krabbe auf der Grundlage der physischen Attribute zu schätzen. Es ist ein hervorragender Ausgangspunkt für die klassische Regressionsanalyse und das Feature-Engineering sowie für das Verständnis der Auswirkungen des Feature-Engineering im Bereich Data Science. (Deutsche Übersetzung von Kaggle)
@@ -94,3 +98,17 @@ Mithilfe eines Violin-Diagramms wird die Altersverteilung in Abhängigkeit vom G
 ![heatmap](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/korrelationsmatrix_heatmap.png)
 
 # Ergebnisse und Analyse der verwendeten Lernverfahren
+## Lineare Regression
+![linearRegressionPlot](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/linear_regression_plot.png)
+## Entscheidungsbaum
+![treePlot](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/decision_tree_plot.png)
+## Support Vector Regression
+![SVRPlot](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/svr_plot.png)
+
+## MAE und MSE
+|  Model   |  MSE   |   MAE    |
+|-------------------|-------------------|-------------------|
+|Lineare Regression|5.92057528339447|1.79432299332576|
+|Entscheidungsbaum|5.9146355290272|1.7920618342224|
+|Support Vector Regression|6.05917555289603|1.65517447947933|
+
