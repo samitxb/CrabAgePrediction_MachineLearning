@@ -15,6 +15,20 @@ library(e1071)       # Für SVM/SVR
 library(tree)       # Für Entscheidungsbaum
 library(caret)
 
+# Funktion zum Löschen der Konsole je nach Umgebung
+clear_console <- function() {
+  if (Sys.getenv("RSTUDIO") == "1") {
+    cat("\014")  # Lösche Konsole in RStudio
+  } else if (.Platform$OS.type == "windows") {
+    shell("cls")  # Lösche Konsole in Windows (VS Code)
+  } else {
+    cat("\014")  # Versuche das Formfeed-Zeichen für andere Umgebungen
+  }
+}
+
+
+clear_console()
+
 # Daten einlesen
 #setwd("C:/Users/administrator.ICD/Desktop/R ML")
 setwd("C:/Users/Sami/Desktop/CrabAgePrediction_ML_DataAnalysis")
@@ -104,6 +118,7 @@ korr_mat_plot <- ggplot(data = heatmap_daten, aes(x = col, y = row, fill = value
   )
   ggsave(filename = "korrelationsmatrix_heatmap.png", plot = korr_mat_plot, bg = "white", width = 10, height = 7)
 
+clear_console()
 
 # Splitte die Daten in Trainings- und Testdatensätze
 set.seed(123)
@@ -119,6 +134,7 @@ linear_mae <- mean(abs(linear_predictions - testdaten$Age))
 print(paste("MSE of Linear Regression:", linear_mse))
 print(paste("MAE of Linear Regression:", linear_mae))
 
+
 # Plot für Lineare Regression
 linear_plot <- ggplot(testdaten, aes(x = ShellWeight, y = Age)) +
   geom_point(color = "blue", alpha = 0.5) +
@@ -132,32 +148,6 @@ linear_plot <- ggplot(testdaten, aes(x = ShellWeight, y = Age)) +
 ggsave(filename = "linear_regression_plot.png", plot = linear_plot, bg = "white", width = 10, height = 7)
 
 
-
-
-# Support Vector Regression (SVR)
-svr_model <- svm(Age ~ ShellWeight, data = trainingdaten)
-svr_predictions <- predict(svr_model, testdaten)
-svr_mse <- mean((svr_predictions - testdaten$Age)^2)
-svr_mae <- mean(abs(svr_predictions - testdaten$Age))
-print(paste("MSE of SVM:", svm_mse))
-print(paste("MAE of SVM:", svr_mae))
-
-# Plot für SVM
-svr_plot <- ggplot(testdaten, aes(x = ShellWeight, y = Age)) +
-  geom_point(color = "blue", alpha = 0.5) +
-  geom_line(aes(y = svr_predictions), color = "red") +
-  labs(
-    title = "Support Vector Regression: Vorhersagen vs. Tatsächliche Werte",
-    x = "ShellWeight",
-    y = "Age"
-  ) +
-  theme_minimal()
-ggsave(filename = "svr_plot.png", plot = svr_plot, bg = "white", width = 10, height = 7)
-
-
-
-
-
 # Entscheidungsbaum
 tree_model <- tree(Age ~ ShellWeight, data = trainingdaten)
 tree_predictions <- predict(tree_model, testdaten)
@@ -165,6 +155,7 @@ tree_mse <- mean((tree_predictions - testdaten$Age)^2)
 tree_mae <- mean(abs(tree_predictions - testdaten$Age))
 print(paste("MSE of Decision Tree:", tree_mse))
 print(paste("MAE of Decision Tree (tree):", tree_mae))
+
 
 # Plot für Entscheidungsbaum
 tree_plot <- ggplot(testdaten, aes(x = ShellWeight, y = Age)) +
@@ -178,3 +169,26 @@ tree_plot <- ggplot(testdaten, aes(x = ShellWeight, y = Age)) +
   theme_minimal()
 ggsave(filename = "decision_tree_plot.png", plot = tree_plot, bg = "white", width = 10, height = 7)
 
+
+
+
+# Support Vector Regression (SVR)
+svr_model <- svm(Age ~ ShellWeight, data = trainingdaten)
+svr_predictions <- predict(svr_model, testdaten)
+svr_mse <- mean((svr_predictions - testdaten$Age)^2)
+svr_mae <- mean(abs(svr_predictions - testdaten$Age))
+print(paste("MSE of SVM:", svm_mse))
+print(paste("MAE of SVM:", svr_mae))
+
+
+# Plot für SVM
+svr_plot <- ggplot(testdaten, aes(x = ShellWeight, y = Age)) +
+  geom_point(color = "blue", alpha = 0.5) +
+  geom_line(aes(y = svr_predictions), color = "red") +
+  labs(
+    title = "Support Vector Regression: Vorhersagen vs. Tatsächliche Werte",
+    x = "ShellWeight",
+    y = "Age"
+  ) +
+  theme_minimal()
+ggsave(filename = "svr_plot.png", plot = svr_plot, bg = "white", width = 10, height = 7)
