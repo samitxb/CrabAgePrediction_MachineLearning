@@ -175,6 +175,52 @@ Distribution of residuals:
 -5.9340 -1.9270 -0.9268  0.0000  1.0470 17.0700
 ```
 
+### Auswertung der Summary
+Dieses Modell verwendet einen Regressionsbaum, um das Alter (Age) basierend auf dem Schalengewicht (ShellWeight) vorherzusagen.
+
+- **Number of terminal nodes:**  6 <br />
+Dies gibt an, dass der Regressionsbaum 6 Endknoten hat. Endknoten sind die Knoten, an denen keine weiteren Aufteilungen mehr vorgenommen werden. Jeder Endknoten repräsentiert eine bestimmte Vorhersage des Alters basierend auf dem Schalengewicht.
+
+Ein Baum mit 6 Endknoten ist relativ einfach und möglicherweise leicht interpretierbar. Ein Baum mit sehr vielen Endknoten könnte überangepasst sein, während ein Baum mit sehr wenigen Endknoten möglicherweise nicht die Komplexität der Daten erfasst.
+
+- **Residual mean deviance:** 6.349 = 17260 / 2719 <br />
+Die Residualmittelabweichung (Residual Mean Deviance) ist ein Maß für die Güte der Anpassung des Modells. Sie wird berechnet als:
+
+Residual Mean Deviance = Residual Sum of Squares / Anzahl der Datenpunkte − Anzahl der Endknoten
+
+In diesem Fall ist sie 6.349, was bedeutet, dass die durchschnittliche Abweichung der Vorhersagen von den tatsächlichen Werten 6.349 beträgt.
+
+**Distribution of residuals:** <br />
+Die Residuen sind die Differenzen zwischen den vorhergesagten und den tatsächlichen Alterswerten. Die Verteilung der Residuen zeigt, wie gut das Modell die Daten angepasst hat.
+
+- **Min:** -5.9340 <br />
+Der kleinste Residuumwert beträgt -5.9340. Dies bedeutet, dass es Datenpunkte gibt, bei denen das Modell das Alter um bis zu 5.9340 Jahre zu niedrig vorhergesagt hat.
+
+- **1st Quartile (1Q):** -1.9270 <br />
+Das erste Quartil beträgt -1.9270. Dies bedeutet, dass 25% der Residuen kleiner oder gleich -1.9270 sind. Anders ausgedrückt: Bei einem Viertel der Datenpunkte unterschätzt das Modell das Alter um mindestens 1.9270 Jahre.
+
+- **Median:** -0.9268 <br />
+Der Median der Residuen beträgt -0.9268. Dies bedeutet, dass die Hälfte der Residuen kleiner oder gleich -0.9268 ist. Ein negativer Median deutet darauf hin, dass das Modell dazu neigt, das Alter leicht zu unterschätzen.
+
+- **Mean:** 0.0000 <br />
+Der Mittelwert der Residuen ist 0.0000. Ein Mittelwert von null ist typisch für ein gut angepasstes Modell, da positive und negative Abweichungen sich ausgleichen.
+
+- **3rd Quartile (3Q):** 1.0470 <br />
+Das dritte Quartil beträgt 1.0470. Dies bedeutet, dass 75% der Residuen kleiner oder gleich 1.0470 sind. Mit anderen Worten: Bei drei Vierteln der Datenpunkte liegt das Modell weniger als 1.0470 Jahre daneben.
+
+- **Max:** 17.0700 <br />
+Der größte Residuumwert beträgt 17.0700. Dies bedeutet, dass es Datenpunkte gibt, bei denen das Modell das Alter um bis zu 17.0700 Jahre zu hoch vorhergesagt hat.
+
+#### Bewertung der Güte
+Die Verteilung der Residuen zeigt, dass das Modell für die meisten Datenpunkte gute Vorhersagen liefert, da die Residuen um den Median von -0.9268 und den Mittelwert von 0.0000 zentriert sind. Das erste und dritte Quartil (zwischen -1.9270 und 1.0470) zeigen, dass die Mehrheit der Vorhersagen relativ nah an den tatsächlichen Werten liegt.
+
+Es gibt jedoch einige Ausreißer, wie der Maximalwert von 17.0700 zeigt. Diese Ausreißer deuten darauf hin, dass das Modell einige wenige Datenpunkte nicht gut vorhersagt. Diese Ausreißer könnten durch besondere Bedingungen in den Daten verursacht sein, die nicht gut durch das Modell erfasst werden.
+
+
+
+
+
+
 ## Support Vector Regression
 ![SVRPlot](https://github.com/samitxb/CrabAgePrediction_ML_DataAnalysis/blob/main/svr_plot.png)
 
