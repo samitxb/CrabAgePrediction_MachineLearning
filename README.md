@@ -46,6 +46,14 @@ Es müssen noch die Namen der Attribute angepasst werden. Dazu einfach den Leers
 ## Wo finde ich den Datensatz?
 https://www.kaggle.com/datasets/sidhus/crab-age-prediction
 ## Summary
+Diese Summary-Tabelle bietet eine statistische Übersicht über die in der CSV-Datei enthaltenen Daten. Sie zeigt die Verteilung der verschiedenen Variablen für eine Population von Krabben. Hier sind die spezifischen Informationen, die aus der Summary abgeleitet werden können:
+
+Min.: Der kleinste Wert in der Datenreihe.
+1st Qu.: Der erste Quartilwert, unter dem 25% der Daten liegen.
+Median: Der mittlere Wert, unter dem 50% der Daten liegen.
+Mean: Der Durchschnittswert der Daten.
+3rd Qu.: Der dritte Quartilwert, unter dem 75% der Daten liegen.
+Max.: Der größte Wert in der Datenreihe.
 
 |   Sex   |     Length      |    Diameter     |     Height      |     Weight      |
 |---------|-----------------|-----------------|-----------------|-----------------|
